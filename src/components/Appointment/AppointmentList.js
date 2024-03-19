@@ -169,7 +169,7 @@ function AppointmentList() {
 
     return (
         <div className="appointment-container">
-            <h1>Randevu Listesi</h1>
+            
 
             {/* Add New Appointment Form */}
             <form onSubmit={handleNewAppointmentSubmit}>
