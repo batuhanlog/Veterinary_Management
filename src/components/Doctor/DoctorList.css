@@ -1,0 +1,35 @@
+.doctor-list-container {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-list-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.doctor-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.doctor-list-container th, .doctor-list-container td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.doctor-list-container th {
+    background-color: #f5f5f5;
+}
+
+.doctor-list-container tr:hover {
+    background-color: #eef;
+}
+
+.doctor-list-container td {
+    color: #555;
+}
