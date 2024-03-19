@@ -1,7 +1,7 @@
 https://veterinary-management.vercel.app/
 
+![Screenshot (26)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/6cc18b7b-57ea-4e7e-b089-a60a229d56bc)
 
-![Screenshot (25)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/906c56e6-4b53-44fe-8dd3-d921a70d294a)
 
 🚀 Veteriner Yönetim Sistemi
 
