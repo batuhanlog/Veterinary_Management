@@ -1,4 +1,5 @@
-Canlı Örnek : veterinary-management.vercel.app
+<a href="veterinary-management.vercel.app" target="_blank">Projenin Canlı hali(rahmetli çok güzel dururdu)</a>
+
 ![Screenshot (25)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/906c56e6-4b53-44fe-8dd3-d921a70d294a)
 
 🚀 Veteriner Yönetim Sistemi
