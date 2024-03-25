@@ -1,4 +1,4 @@
-const BASE_URL = "http://vett-backend.onrender.com/api/v1/vaccine";
+const BASE_URL = "https://vett-backend.onrender.com/api/v1/vaccine";
 
 export const VaccineService = {
     getAllVaccines: async () => {
