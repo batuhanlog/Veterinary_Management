@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api/v1/customer";
+const BASE_URL = "http://vett-backend.onrender.com/api/v1/customer";
 
 export const CustomerService = {
     getAllCustomers: async () => {
