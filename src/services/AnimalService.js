@@ -1,4 +1,4 @@
-const ANIMAL_BASE_URL = "https://vett-backend.onrender.com/api/v1/animal";
+const ANIMAL_BASE_URL = "https://vet-backend-3gew.onrender.com/api/v1/animal";
 
 export const AnimalService = {
     getAllAnimals: async () => {
