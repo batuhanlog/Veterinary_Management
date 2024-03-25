@@ -1,4 +1,4 @@
-const BASE_URL = "https://vett-backend.onrender.com/api/v1/available_date";
+const BASE_URL = "https://vet-backend-3gew.onrender.com/api/v1/available_date";
 //
 export const AvailableDateService = {
     getAllDates: async () => {
