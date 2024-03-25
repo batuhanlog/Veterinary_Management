@@ -1,4 +1,4 @@
-const ANIMAL_BASE_URL = "http://localhost:3000/api/v1/animal";
+const ANIMAL_BASE_URL = "http://vett-backend.onrender.com/api/v1/animal";
 
 export const AnimalService = {
     getAllAnimals: async () => {
