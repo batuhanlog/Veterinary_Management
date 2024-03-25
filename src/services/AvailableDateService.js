@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api/v1/available_date";
+const BASE_URL = "http://vett-backend.onrender.com/api/v1/available_date";
 
 export const AvailableDateService = {
     getAllDates: async () => {
