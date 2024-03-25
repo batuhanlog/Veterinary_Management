@@ -1,4 +1,4 @@
-const BASE_URL = "https://vett-backend.onrender.com/api/v1/appointmentDate";
+const BASE_URL = "https://vet-backend-3gew.onrender.com/api/v1/appointmentDate";
 
 export const AppointmentService = {
     getAllAppointments: async () => {
