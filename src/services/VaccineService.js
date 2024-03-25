@@ -1,47 +1,124 @@
 const BASE_URL = "http://localhost:3000/api/v1/vaccine";
 
 export const VaccineService = {
-    getAllVaccines: () => {
-        return fetch(`${BASE_URL}`)
-            .then(response => response.json())
-            .catch(error => console.error('Hata:', error));
+    getAllVaccines: async () => {
+        try {
+            const response = await fetch(`${BASE_URL}`);
+            if (!response.ok) throw new Error('Error fetching vaccines.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
     },
 
-    getVaccineById: (id) => {
-        return fetch(`${BASE_URL}/${id}`)
-            .then(response => response.json())
-            .catch(error => console.error('Hata:', error));
+    getVaccineById: async (id) => {
+        try {
+            const response = await fetch(`${BASE_URL}/${id}`);
+            if (!response.ok) throw new Error('Error fetching vaccine details.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
     },
 
-    createVaccine: (vaccineData) => {
-        return fetch(`${BASE_URL}/create`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(vaccineData),
-        }).then(response => response.json())
-          .catch(error => console.error('Hata:', error));
+    createVaccine: async (vaccineData) => {
+        try {
+            const response = await fetch(`${BASE_URL}/create`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(vaccineData)
+            });
+            if (!response.ok) throw new Error('Error creating vaccine.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
     },
 
-    updateVaccine: (id, vaccineData) => {
-        return fetch(`${BASE_URL}/update/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(vaccineData),
-        }).then(response => response.json())
-          .catch(error => console.error('Hata:', error));
+    updateVaccine: async (id, vaccineData) => {
+        try {
+            const response = await fetch(`${BASE_URL}/update/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(vaccineData)
+            });
+            if (!response.ok) throw new Error('Error updating vaccine.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
     },
 
-    deleteVaccine: (id) => {
-        return fetch(`${BASE_URL}/delete/${id}`, {
-            method: 'DELETE',
-        }).then(response => {
-            if (!response.ok) {
-                throw new Error('Silme işlemi başarısız.');
-            }
-        }).catch(error => console.error('Hata:', error));
+    deleteVaccine: async (id) => {
+        try {
+            const response = await fetch(`${BASE_URL}/delete/${id}`, {
+                method: 'DELETE'
+            });
+            if (!response.ok) throw new Error('Error deleting vaccine.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    },
+
+    getAll: async () => {
+        try {
+            const response = await fetch(`${BASE_URL}`);
+            if (!response.ok) throw new Error('Error fetching vaccines.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    },
+
+    getById: async (id) => {
+        try {
+            const response = await fetch(`${BASE_URL}/${id}`);
+            if (!response.ok) throw new Error('Error fetching vaccine details.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    },
+
+    create: async (vaccineData) => {
+        try {
+            const response = await fetch(`${BASE_URL}/create`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(vaccineData)
+            });
+            if (!response.ok) throw new Error('Error creating vaccine.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    },
+
+    update: async (id, vaccineData) => {
+        try {
+            const response = await fetch(`${BASE_URL}/update/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(vaccineData)
+            });
+            if (!response.ok) throw new Error('Error updating vaccine.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    },
+
+    delete: async (id) => {
+        try {
+            const response = await fetch(`${BASE_URL}/delete/${id}`, {
+                method: 'DELETE'
+            });
+            if (!response.ok) throw new Error('Error deleting vaccine.');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+        }
     }
+
 };

@@ -9,15 +9,16 @@ import AppointmentList from '../src/components/Appointment/AppointmentList';
 import VaccineList from '../src/components/Vaccine/VaccineList';
 import AvailableDateList from '../src/components/Available_Date/AvailableDateList';
 import ReportList from '../src/components/Report/ReportList';
+import { AnimalProvider } from './components/Animal/AnimalContext';
 
 function App() {
     return (
-        <Router>
+             <Router>
             <div>
-                {/* Navbar */}
+              
                 <Navbar />
                 
-                {/* Navbar Linkleri */}
+        
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/animals" element={<AnimalList />} />
@@ -26,10 +27,14 @@ function App() {
                     <Route path="/appointments" element={<AppointmentList />} />
                     <Route path="/vaccines" element={<VaccineList />} />
                     <Route path="/available-dates" element={<AvailableDateList />} /> 
-                    <Route path="/reports" element={<ReportList />} /> {/* Güncellenmiş satır */}
+                    <Route path="/reports" element={<ReportList />} />
                 </Routes>
             </div>
         </Router>
+
+
+
+
     );
 }
 

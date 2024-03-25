@@ -1,22 +1,92 @@
 .appointment-container {
-    width: 100%;
+    margin: auto;
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #fff;
+    width: 90%;
+    max-width: 1150px;
+}
+
+.appointment-container h2 {
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .appointment-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
-.appointment-table th,
-.appointment-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.appointment-table th, .appointment-table td {
     text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
 }
 
 .appointment-table th {
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
+}
+
+.appointment-table tr:hover {
+    background-color: #eef;
+}
+
+.appointment-table td {
+    color: #555;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #2D9596; 
+    color: white;
+}
+
+button:hover {
+    background-color: #2D9596;
+}
+
+.appointment-update-form {
+    width: 500px;
+    /* margin: 0 auto; Remove this line */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.appointment-update-form input,
+.appointment-update-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.appointment-table td:nth-child(1) {
+    width: 5%; /* ID */
+}
+.appointment-table td:nth-child(2),
+.appointment-table td:nth-child(3) {
+    width: 15%; /* Tarih ve Saat */
+}
+.appointment-table td:nth-child(4),
+.appointment-table td:nth-child(6) {
+    width: 10%; /* ID'ler */
 }

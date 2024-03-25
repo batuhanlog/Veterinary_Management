@@ -34,7 +34,7 @@ export const AvailableDateService = {
             },
             body: JSON.stringify({
                 ...dateData,
-                availableDate: new Date(dateData.date).toISOString().split('T')[0]  // yyyy-MM-dd formatına dönüştür
+                availableDate: new Date(dateData.date).toISOString().split('T')[0]
             }),
         });
         if (!response.ok) {
@@ -61,13 +61,13 @@ export const AvailableDateService = {
     },
 
     createDateWithDoctor: async (dateData, doctorId) => {
-        // Tarih formatını düzenle
+    
         const formattedDateData = {
             ...dateData,
             availableDate: new Date(dateData.date).toISOString().split('T')[0]
         };
     
-        // API isteğini gönder
+
         const response = await fetch(`${BASE_URL}/create-with-doctor/${doctorId}`, {
             method: 'POST',
             headers: {

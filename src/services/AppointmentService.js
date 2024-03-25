@@ -15,10 +15,10 @@ export const AppointmentService = {
             throw new Error('Randevu bilgisi alınamadı.');
         }
         return await response.json();
-    },
+    }, 
 
-     createAppointment: async (doctorId, animalId, appointmentDate) => {
-        const response = await fetch(`/api/v1/appointmentDate/create-with-doctor-and-animal/${doctorId}/${animalId}`, {
+    createAppointment: async (doctorId, animalId, appointmentDate) => {
+        const response = await fetch(`${BASE_URL}/create-with-doctor-and-animal/${doctorId}/${animalId}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ appointmentDate })
@@ -29,11 +29,11 @@ export const AppointmentService = {
         return await response.json();
     },
 
-    updateAppointment: async (id, appointmentDate, doctorId, animalId) => {
-        const response = await fetch(`/api/v1/appointmentDate/update/${id}`, {
+    updateAppointment: async (appointment) => {
+        const response = await fetch(`${BASE_URL}/update/${appointment.id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ appointmentDate, doctorId, animalId })
+            body: JSON.stringify(appointment)
         });
         if (!response.ok) {
             throw new Error('Failed to update appointment.');

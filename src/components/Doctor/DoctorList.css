@@ -33,3 +33,7 @@
 .doctor-list-container td {
     color: #555;
 }
+
+.btn-primary.mx-2 {
+    background-color: #555 !important;
+}

@@ -66,12 +66,12 @@ function CustomerList() {
             if (customer) {
                 setCustomerDetails(customer);
             } else {
-                // Müşteri bulunamazsa, önceki müşteri detaylarını temizle
+   
                 setCustomerDetails(null);
             }
         } catch (error) {
             console.error('Müşteri alınırken bir hata oluştu:', error);
-            setCustomerDetails(null); // Hata oluşursa da detayları temizle
+            setCustomerDetails(null); 
         }
     };
     
@@ -89,29 +89,8 @@ function CustomerList() {
 
     return (
         <div className="container">
-            <h1 className="mt-3 text-center" style={{ color: "green" }}>Müşteri Listesi</h1>
+            <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Müşteri Listesi</h1>
 
-            {/* Yeni müşteri ekleme işlemi */}
-            <div className="mb-3">
-                <input type="text" value={newCustomer.name} onChange={(e) => setNewCustomer({ ...newCustomer, name: e.target.value })} placeholder="Name" />
-                <input type="text" value={newCustomer.mail} onChange={(e) => setNewCustomer({ ...newCustomer, mail: e.target.value })} placeholder="Email" />
-                <input type="text" value={newCustomer.address} onChange={(e) => setNewCustomer({ ...newCustomer, address: e.target.value })} placeholder="Address" />
-                <input type="text" value={newCustomer.city} onChange={(e) => setNewCustomer({ ...newCustomer, city: e.target.value })} placeholder="City" />
-                <input type="text" value={newCustomer.phone} onChange={(e) => setNewCustomer({ ...newCustomer, phone: e.target.value })} placeholder="Phone" />
-                <button className="btn btn-primary mx-2" onClick={handleAddCustomer}>Create Customer</button>
-            </div>
-
-           
-            {/* Müşteri arama işlemi */}
-            <div className="mb-3">
-                <input 
-                    type="text" 
-                    value={searchTerm} 
-                    onChange={(e) => setSearchTerm(e.target.value)} 
-                    placeholder="Müşteri ismine göre ara" 
-                />
-                <button onClick={handleSearch} className="btn btn-primary mx-2">Ara</button>
-            </div>
 
             {/* Müşteri Listesi */}
             <table className="table table-striped">
@@ -177,24 +156,38 @@ function CustomerList() {
                             )}</td>
                             <td>
                                 {!editMode || (editMode && editingCustomer && editingCustomer.id !== customer.id) ? (
-                                    <button className="btn btn-warning" onClick={() => handleEditClick(customer)}>Edit</button>
+                                    <button className="btn btn-warning" style={{backgroundColor : "#E36414", color: "white"}} 
+                                    onClick={() => handleEditClick(customer)}>Değiştir</button>
                                 ) : (
                                     <>
                                         <button className="btn btn-success" onClick={handleUpdateCustomer}>Save</button>
-                                        <button className="btn btn-secondary mx-2" onClick={() => setEditMode(false)}>Cancel</button>
+                                        <button className="btn btn-secondary mx-2" onClick={() => setEditMode(false)}>İptal Et</button>
                                     </>
                                 )}
-                                <button className="btn btn-danger" onClick={() => handleDelete(customer.id)}>Delete</button>
+                                <button className="btn btn-danger" style={{backgroundColor : "#4F4A45", color: "white"}} onClick={() => handleDelete(customer.id)}>Sil</button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
 
+                        {/* Müşteri arama işlemi */}
+                        <div className="mb-3">
+                <input 
+                    type="text" 
+                    value={searchTerm} 
+                    onChange={(e) => setSearchTerm(e.target.value)} 
+                    placeholder="Müşteri ismine göre ara" 
+                />
+                <button onClick={handleSearch} style={{backgroundColor: "#2D9596"}} className="btn btn-primary mx-2">Ara</button>
+            </div>
+
              {/* ID'ye göre müşteri getirme işlemi */}
              <div className="mb-3">
                 <input type="text" value={customerId} onChange={(e) => setCustomerId(e.target.value)} placeholder="Customer ID" />
-                <button className="btn btn-primary mx-2" onClick={handleGetByIdSubmit}>Get Customer by ID</button>
+                <button className="btn btn-primary mx-2" style={{backgroundColor: "#2D9596"}} onClick={handleGetByIdSubmit}>ID no ile ara</button>
+
+                
             </div>
 
 
@@ -210,6 +203,22 @@ function CustomerList() {
                     <p><strong>Telefon:</strong> {customerDetails.phone}</p>
                 </div>
             )}
+
+            <h2 className="mt-3">Müşteri Ekle</h2>
+
+                 {/* Yeni müşteri ekleme işlemi */}
+                 <div className="mb-3">
+                <input type="text" value={newCustomer.name} onChange={(e) => setNewCustomer({ ...newCustomer, name: e.target.value })} placeholder="İsim" />
+                <input type="text" value={newCustomer.mail} onChange={(e) => setNewCustomer({ ...newCustomer, mail: e.target.value })} placeholder="Email" />
+                <br></br>
+                <br></br>
+                <input type="text" value={newCustomer.address} onChange={(e) => setNewCustomer({ ...newCustomer, address: e.target.value })} placeholder="Adres" />
+                <input type="text" value={newCustomer.city} onChange={(e) => setNewCustomer({ ...newCustomer, city: e.target.value })} placeholder="Şehir" />
+                <br></br>
+                <br></br>
+                <input type="text" value={newCustomer.phone} onChange={(e) => setNewCustomer({ ...newCustomer, phone: e.target.value })} placeholder="Telefon" />
+                <button className="btn btn-primary mx-2" style={{ backgroundColor:  "#2D9596" }} onClick={handleAddCustomer}>Müşteri Ekle</button>
+            </div>
         </div>
     );
 }

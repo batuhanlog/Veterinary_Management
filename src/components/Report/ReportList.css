@@ -1,49 +1,31 @@
-/* Report.css */
-.report-container {
+.report-list {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.report-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.report-list li {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.report-form {
-    margin-bottom: 20px;
-}
-
-.report-form input,
-.report-form select,
-.report-form textarea,
-.report-form button {
-    display: block;
-    width: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  .report-item {
+    border: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-.report-form button {
-    background-color: #5cb85c;
-    color: white;
-    border-color: #4cae4c;
-}
-
-.report-form button:hover {
-    background-color: #4cae4c;
-}
-
-.error-message {
-    color: red;
-    margin-top: 10px;
-}
+  }
+  
+  label, input {
+    margin: 10px 0;
+    display: block;
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  

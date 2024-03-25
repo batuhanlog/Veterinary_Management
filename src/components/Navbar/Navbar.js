@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-danger">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link className="navbar-brand text-body-emphasis" to="/">
-          Veteriner Management
+        <Link className="navbar-brand" to="/">
+          Veteriner Yönetim Sistemi
         </Link>
         <button
           className="navbar-toggler"
@@ -19,45 +19,44 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse " id="navbarSupportedContent" >
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item ">
-              <Link className="nav-link text-light" to="/doctors">
+            <li className="nav-item">
+              <Link className="nav-link" to="/doctors">
                 Doktorlar
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/customers">
+              <Link className="nav-link" to="/customers">
                 Müşteriler
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/appointments">
+              <Link className="nav-link" to="/appointments">
                 Randevular
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/animals">
+              <Link className="nav-link" to="/animals">
                 Hayvanlar
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/vaccines">
+              <Link className="nav-link" to="/vaccines">
                 Aşılar
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light " to="/available-dates">
+              <Link className="nav-link" to="/available-dates">
                 Müsait Günler
               </Link>
             </li>
-            {/* Yeni eklenen Raporlar linki */}
+         
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/reports">
+              <Link className="nav-link" to="/reports">
                 Raporlar
               </Link>
             </li>
-            {/* Diğer ekstra linkler */}
           </ul>
         </div>
       </div>

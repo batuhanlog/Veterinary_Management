@@ -74,20 +74,9 @@ function DoctorList() {
 
     return (
         <div className="container">
-            <h1 className="mt-3 text-center" style={{ color: "green" }}>Doktor Listesi</h1>
-
-            {/* Yeni doktor ekleme formu */}
-            <div className="mb-3">
-                <input type="text" value={newDoctor.name} onChange={(e) => setNewDoctor({ ...newDoctor, name: e.target.value })} placeholder="Name" />
-                <input type="text" value={newDoctor.mail} onChange={(e) => setNewDoctor({ ...newDoctor, mail: e.target.value })} placeholder="Email" />
-                <input type="text" value={newDoctor.address} onChange={(e) => setNewDoctor({ ...newDoctor, address: e.target.value })} placeholder="Address" />
-                <input type="text" value={newDoctor.city} onChange={(e) => setNewDoctor({ ...newDoctor, city: e.target.value })} placeholder="City" />
-                <input type="text" value={newDoctor.phone} onChange={(e) => setNewDoctor({ ...newDoctor, phone: e.target.value })} placeholder="Phone" />
-                <button className="btn btn-primary mx-2" onClick={handleAddDoctor}>Create Doctor</button>
-            </div>
-
+            <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Doktor İşlemleri</h1>
             
-            {/* Doctor Listesi, update delete butonları */}
+ 
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -101,7 +90,7 @@ function DoctorList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {doctors.map(doctor => (
+                    {doctors && doctors.map(doctor => (
                         <tr key={doctor.id}>
                             <td>{doctor.id}</td>
                             <td>{editMode && editingDoctor && editingDoctor.id === doctor.id ? (
@@ -151,24 +140,52 @@ function DoctorList() {
                             )}</td>
                             <td>
                                 {!editMode || (editMode && editingDoctor && editingDoctor.id !== doctor.id) ? (
-                                    <button className="btn btn-warning" onClick={() => handleEditClick(doctor)}>Edit</button>
+                                    <button 
+                                    className="btn btn-warning" 
+                                    onClick={() => handleEditClick(doctor)}
+                                    style={{
+                                        backgroundColor: '#E36414', 
+                                        color: '#ffffff' 
+                                    }}
+                                >
+                                    Değiştir
+                                </button>
+                                
                                 ) : (
                                     <>
                                         <button className="btn btn-success" onClick={handleUpdateDoctor}>Save</button>
                                         <button className="btn btn-secondary mx-2" onClick={() => setEditMode(false)}>Cancel</button>
                                     </>
                                 )}
-                                <button className="btn btn-danger" onClick={() => handleDelete(doctor.id)}>Delete</button>
+                                <button 
+                                className="btn btn-danger" 
+                                onClick={() => handleDelete(doctor.id)}
+                                style={{
+                                    backgroundColor: '#4F4A45', 
+                                    color: '#ffffff'
+                                }}
+                                >
+                                Sil
+                                </button>
+
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
 
-            {/* Doktor bilgisini ID'ye göre filtreleme işlemi*/}
             <div className="mb-3">
                 <input type="text" value={doctorId} onChange={(e) => setDoctorId(e.target.value)} placeholder="Doctor ID" />
-                <button className="btn btn-primary mx-2" onClick={handleGetByIdSubmit}>Get Doctor by ID</button>
+                <button 
+                className="btn btn-primary mx-2" 
+                onClick={handleGetByIdSubmit}
+                style={{ 
+                    backgroundColor: '#2D9596', 
+                  
+    }}
+>
+    ID no ile ara
+</button>
             </div>
 
             {doctorDetails && (
@@ -183,7 +200,37 @@ function DoctorList() {
                 </div>
             )}
 
+                        {/* Yeni doktor ekleme formu */}
+                        <h2>Doktor Ekle</h2>
+                        <div className="mb-3">
+                <input type="text" value={newDoctor.name} onChange={(e) => setNewDoctor({ ...newDoctor, name: e.target.value })} placeholder="İsim" />
+                <input type="text" value={newDoctor.mail} onChange={(e) => setNewDoctor({ ...newDoctor, mail: e.target.value })} placeholder="Email" />
+                <br></br>
+                <br></br>
+                <input type="text" value={newDoctor.address} onChange={(e) => setNewDoctor({ ...newDoctor, address: e.target.value })} placeholder="Adres" />
+                <input type="text" value={newDoctor.city} onChange={(e) => setNewDoctor({ ...newDoctor, city: e.target.value })} placeholder="Şehir" />
+                <br></br>
+                <br></br>
+                <input type="text" value={newDoctor.phone} onChange={(e) => setNewDoctor({ ...newDoctor, phone: e.target.value })} placeholder="Telefon" />
+            
+                
+                <button 
+                className="btn btn-primary mx-2" 
+                onClick={handleAddDoctor}
+                style={{ 
+                    backgroundColor: '#2D9596', 
+                  
+            }}
+            >
+            Doktor Ekle
+            </button>
+
+
+            </div>
+
         </div>
+
+        
     );
 }
 

@@ -1,6 +1,8 @@
 const BASE_URL = "http://localhost:3000/api/v1/doctor";
 
 export const DoctorService = {
+
+
     getAllDoctors: async () => {
         try {
             const response = await fetch(`${BASE_URL}`);
@@ -10,7 +12,7 @@ export const DoctorService = {
             return await response.json();
         } catch (error) {
             console.error('Hata:', error);
-
+            return []; 
         }
     },
 
