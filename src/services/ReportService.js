@@ -1,6 +1,6 @@
 import axios from 'axios';
 //
-const BASE_URL = 'https://vett-backend.onrender.com/api/v1/report'; 
+const BASE_URL = "https://vet-backend-3gew.onrender.com/api/v1/report"; 
 
 const getReports = async () => {
   try {
