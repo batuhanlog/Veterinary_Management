@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import AvailableDateService from '../../services/AvailableDateService';
+import './AvailableDate.css'; // Yeni CSS dosyasını dahil edin
 
 function AvailableDateList() {
   const [availableDates, setAvailableDates] = useState([]);
-  const [editAvailableDate, setEditAvailableDate] = useState(null);
   const [newAvailableDate, setNewAvailableDate] = useState({
     availableDate: '',
     doctorId: '',
@@ -22,10 +22,6 @@ function AvailableDateList() {
     }
   };
 
-  const handleEditClick = (date) => {
-    setEditAvailableDate({ ...date });
-  };
-
   const handleCreate = async () => {
     try {
       await AvailableDateService.createAvailableDate(newAvailableDate);
@@ -36,13 +32,10 @@ function AvailableDateList() {
     }
   };
 
-
-
-  const handleUpdate = async () => {
+  const handleUpdate = async (id) => {
     try {
-      await AvailableDateService.updateAvailableDate(editAvailableDate.id, editAvailableDate);
+      await AvailableDateService.updateAvailableDate(id, newAvailableDate);
       fetchAvailableDates();
-      setEditAvailableDate(null); // Edit modunu kapat
     } catch (error) {
       console.error('Error updating available date:', error);
     }
@@ -58,8 +51,8 @@ function AvailableDateList() {
   };
 
   return (
-    <div>
-      <h2>Available Dates📆</h2>
+    <div className="available-date-list-container"> {/* Class adını değiştirin */}
+      <h2>Available Dates</h2>
       <div>
         <input
           type="date"
@@ -72,34 +65,14 @@ function AvailableDateList() {
           onChange={(e) => setNewAvailableDate({ ...newAvailableDate, doctorId: e.target.value })}
           placeholder="Doctor ID"
         />
-        <button onClick={handleCreate}>Add New Available Date</button>
+        <button className="add-new-available-date-button" onClick={handleCreate}>Add New Available Date</button> {/* Class adını değiştirin */}
       </div>
-
-
-      {/* Düzenleme formu */}
-      {editAvailableDate && (
-        <div>
-          <input
-            type="date"
-            value={editAvailableDate.availableDate}
-            onChange={(e) => setEditAvailableDate({ ...editAvailableDate, availableDate: e.target.value })}
-          />
-          <input
-            type="number"
-            value={editAvailableDate.doctorId}
-            onChange={(e) => setEditAvailableDate({ ...editAvailableDate, doctorId: e.target.value })}
-            placeholder="Doctor ID"
-          />
-          <button onClick={handleUpdate}>Update Available Date</button>
-        </div>
-      )}
-
-      <ul>
+      <ul className="available-date-list"> {/* Class adını değiştirin */}
         {availableDates.map((date) => (
           <li key={date.id}>
-          ID: {date.id} - Date: {date.availableDate} - Doctor ID: {date.doctorId}
-            <button onClick={() => handleEditClick(date)}>Edit</button>
-            <button onClick={() => handleDelete(date.id)}>Delete</button>
+            {date.availableDate} - Doctor ID: {date.doctorId}
+            <button className="edit-available-date-button" onClick={() => handleUpdate(date.id)}>Edit</button> {/* Class adını değiştirin */}
+            <button className="delete-available-date-button" onClick={() => handleDelete(date.id)}>Delete</button> {/* Class adını değiştirin */}
           </li>
         ))}
       </ul>
