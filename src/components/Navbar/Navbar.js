@@ -27,34 +27,34 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/customers">
-                Müşteriler
+              <Link className="nav-link text-white" to="/customers">
+                Müşteriler🧑‍🤝‍🧑
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/appointments">
-                Randevular
+              <Link className="nav-link text-white" to="/appointments">
+                Randevular📅
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/animals">
-                Hayvanlar
+              <Link className="nav-link text-white" to="/animals">
+                Hayvanlar🐈
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/vaccines">
+              <Link className="nav-link text-white" to="/vaccines">
                 Aşılar
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/available-dates">
-                Müsait Günler
+              <Link className="nav-link text-white" to="/available-dates">
+                Müsait Günler📆
               </Link>
             </li>
          
             <li className="nav-item">
-              <Link className="nav-link" to="/reports">
-                Raporlar
+              <Link className="nav-link text-white" to="/reports">
+                Raporlar📚
               </Link>
             </li>
           </ul>
