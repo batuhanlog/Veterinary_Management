@@ -67,8 +67,6 @@ const parseDate = (dateTime) => {
         return matchesDoctor && matchesAnimal && isWithinRange;
       }); 
       
- 
-
 
     const handleUpdate = (id) => {
         const appointmentToUpdate = appointments.find(appointment => appointment.id === id);
