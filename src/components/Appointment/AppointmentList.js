@@ -119,7 +119,7 @@ const parseDate = (dateTime) => {
 
     const loadAppointments = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/api/v1/appointmentDate');
+            const response = await axios.get('https://vet-backend-3gew.onrender.com/api/v1/appointmentDate');
             setAppointments(response.data);
         } catch (error) {
             console.error('Randevular yüklenemedi:', error);
@@ -152,7 +152,7 @@ const parseDate = (dateTime) => {
 
     const fetchDoctorById = async (doctorId) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/v1/doctor/${doctorId}`);
+            const response = await fetch(`https://vet-backend-3gew.onrender.com/api/v1/doctor/${doctorId}`);
             if (!response.ok) {
                 throw new Error('Doktor bilgisi alınamadı');
             }
@@ -167,7 +167,7 @@ const parseDate = (dateTime) => {
     
     const fetchAnimalById = async (animalId) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/v1/animal/${animalId}`);
+            const response = await fetch(`https://vet-backend-3gew.onrender.com/api/v1/animal/${animalId}`);
             if (!response.ok) {
                 throw new Error('Hayvan bilgisi alınamadı');
             }
