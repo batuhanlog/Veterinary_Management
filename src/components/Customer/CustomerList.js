@@ -89,7 +89,8 @@ function CustomerList() {
 
     return (
         <div className="container">
-            <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Müşteri Listesi</h1>
+            <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Müşteri Listesi🧑‍🤝‍🧑
+</h1>
 
 
             {/* Müşteri Listesi */}
