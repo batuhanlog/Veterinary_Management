@@ -126,34 +126,40 @@ function AvailableDateList() {
                         <th>İşlemler</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {dates.map(date => (
-                        <tr key={date.id}>
-                            <td>{date.id}</td>
-                            <td>{editMode && editingDate && editingDate.id === date.id ? (
-                                <input
-                                    type="date"
-                                    value={editingDate.date}
-                                    onChange={(e) => setEditingDate({ ...editingDate, date: e.target.value })}
-                                />
-                            ) : (
-                                parseDate(date.availableDate)
-                            )}</td>
-                            <td>{date.doctorId ? date.doctorId : 'Doktor Bilgisi Yok'}</td>
-                            <td>
-                                {!editMode || (editMode && editingDate && editingDate.id !== date.id) ? (
-                                    <button className="btn btn-warning" style={{backgroundColor : "#E36414", color: "white"}} onClick={() => handleEditClick(date)}>Düzenle</button>
-                                ) : (
-                                    <>
-                                        <button className="btn btn-success" onClick={handleUpdateDate}>Kaydet</button>
-                                        <button className="btn btn-secondary mx-2" style={{backgroundColor : "#4F4A45", color: "white"}} onClick={() => setEditMode(false)}>İptal</button>
-                                    </>
-                                )}
-                                <button className="btn btn-danger" style={{backgroundColor : "#4F4A45", color: "white"}}  onClick={() => handleDelete(date.id)}>Sil</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
+               <tbody>
+  {dates.length === 0 ? (  // Veriler yükleniyorsa
+    <tr><td colSpan={4}>Yükleniyor...</td></tr>  
+  ) : ( // Veriler yüklendiyse
+    dates.map(date => (
+      <tr key={date.id}>
+        <td>{date.id}</td>
+        <td>{editMode && editingDate && editingDate.id === date.id ? (
+            <input
+              type="date"
+              value={editingDate.date}
+              onChange={(e) => setEditingDate({ ...editingDate, date: e.target.value })}
+            />
+          ) : (
+            parseDate(date.availableDate)
+          )}
+        </td> 
+        <td>{date.doctorId ? date.doctorId : 'Doktor Bilgisi Yok'}</td>
+        <td>
+          {!editMode || (editMode && editingDate && editingDate.id !== date.id) ? (
+            <button className="btn btn-warning" style={{backgroundColor : "#E36414", color: "white"}} onClick={() => handleEditClick(date)}>Düzenle</button>
+          ) : (
+            <>
+              <button className="btn btn-success" onClick={handleUpdateDate}>Kaydet</button>
+              <button className="btn btn-secondary mx-2" style={{backgroundColor : "#4F4A45", color: "white"}} onClick={() => setEditMode(false)}>İptal</button>
+            </>
+          )}
+          <button className="btn btn-danger" style={{backgroundColor : "#4F4A45", color: "white"}} onClick={() => handleDelete(date.id)}>Sil</button>
+        </td>
+      </tr>
+    ))
+  )}
+</tbody>
+
             </table>
 
 
