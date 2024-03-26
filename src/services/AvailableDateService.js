@@ -93,4 +93,3 @@ export const AvailableDateService = {
     }
 };
 
-export defualt AvailableDateService;
