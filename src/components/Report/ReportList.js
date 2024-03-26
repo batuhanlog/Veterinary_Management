@@ -160,7 +160,7 @@ const ReportList = () => {
     
     <div className="report-list">
 
-<h1>Reports</h1>
+<h1>Reports📚</h1>
 
 {loading ? (
         <p>Loading reports...</p>
