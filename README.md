@@ -2,7 +2,10 @@ Front End [https://veterinary-management.vercel.app/](https://veterinary-managem
 Back End : https://vet-backend-3gew.onrender.com<br/>
 Back-End Repo : https://github.com/batuhanlog/Vet-Backend
 
-![Screenshot (26)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/6cc18b7b-57ea-4e7e-b089-a60a229d56bc)
+![Screenshot (28)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/3b1310d8-0344-4072-9729-d47260db8af5)
+![Screenshot (29)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/335ca6c7-0112-42b3-9ff4-ba4a9ae3b39d)
+![Screenshot (30)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/beae5ffe-8e21-4705-be6f-bda4a1a43f69)
+![Screenshot (31)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/317b45c9-bdc7-4722-a248-32468146902b)
 ![image](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/430516b8-7aac-4354-94ed-cb96993682fa)
 
 
