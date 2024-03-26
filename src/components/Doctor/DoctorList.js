@@ -74,7 +74,7 @@ function DoctorList() {
 
     return (
         <div className="container">
-            <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Doktor İşlemleri</h1>
+            <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Doktor İşlemleri👨‍⚕️</h1>
             
  
             <table className="table table-striped">
