@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import { getReports, createReport, updateReport, deleteReport } from '../../services/ReportService';
 
-const BASE_URL = 'http://localhost:3000/api/v1/report'; 
+const BASE_URL = 'https://vet-backend-3gew.onrender.com/api/v1/report'; 
 
 const ReportList = () => {
   const [reports, setReports] = useState([]);
@@ -15,7 +15,7 @@ const ReportList = () => {
 
   useEffect(() => {
     loadReports();
-    fetch('http://localhost:3000/api/v1/report') 
+    fetch('https://vet-backend-3gew.onrender.com/api/v1/report') 
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
