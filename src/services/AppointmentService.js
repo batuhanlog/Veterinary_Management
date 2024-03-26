@@ -2,7 +2,7 @@ const BASE_URL = "https://vet-backend-3gew.onrender.com/api/v1/appointmentDate";
 
 export const AppointmentService = {
     getAllAppointments: async () => {
-        const response = await fetch(`${BASE_URL}`);
+        const response = await fetch(${BASE_URL});
         if (!response.ok) {
             throw new Error('Randevu verileri alınamadı.');
         }
@@ -10,7 +10,7 @@ export const AppointmentService = {
     },
 
     getAppointmentById: async (id) => {
-        const response = await fetch(`${BASE_URL}/${id}`);
+        const response = await fetch(${BASE_URL}/${id});
         if (!response.ok) {
             throw new Error('Randevu bilgisi alınamadı.');
         }
@@ -18,7 +18,7 @@ export const AppointmentService = {
     }, 
 
     createAppointment: async (doctorId, animalId, appointmentDate) => {
-        const response = await fetch(`${BASE_URL}/create-with-doctor-and-animal/${doctorId}/${animalId}`, {
+        const response = await fetch(${BASE_URL}/create-with-doctor-and-animal/${doctorId}/${animalId}, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ appointmentDate })
@@ -30,7 +30,7 @@ export const AppointmentService = {
     },
 
     updateAppointment: async (appointment) => {
-        const response = await fetch(`${BASE_URL}/update/${appointment.id}`, {
+        const response = await fetch(${BASE_URL}/update/${appointment.id}, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(appointment)
@@ -42,7 +42,7 @@ export const AppointmentService = {
     },
 
     deleteAppointment: async (id) => {
-        const response = await fetch(`${BASE_URL}/delete/${id}`, {
+        const response = await fetch(${BASE_URL}/delete/${id}, {
             method: 'DELETE',
         });
         if (!response.ok) {
