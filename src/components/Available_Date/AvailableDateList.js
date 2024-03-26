@@ -59,7 +59,7 @@ function AvailableDateList() {
 
   return (
     <div>
-      <h2>Available Dates</h2>
+      <h2>Available Dates📆</h2>
       <div>
         <input
           type="date"
