@@ -57,7 +57,7 @@ function VaccineList() {
 
     return (
         <div className="vaccine-list-container">
-            <h2 className="list-heading">Vaccine List</h2>
+            <h2 className="list-heading">Vaccine List💉</h2>
             {vaccines.length > 0 ? (
                 <table className='vaccine-table'>
                     <thead>
