@@ -58,7 +58,7 @@ function AvailableDateList() {
   };
 
   return (
-    <div>
+    <div className="container-div">
       <h2>Available Dates</h2>
       <div>
         <input
