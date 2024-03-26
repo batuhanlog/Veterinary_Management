@@ -9,7 +9,7 @@ const AppointmentDateForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/v1/appointmentDate/create-with-doctor-and-animal/' + doctorId + '/' + animalId, {
+            const response = await axios.post('https://vet-backend-3gew.onrender.com/api/v1/appointmentDate/create-with-doctor-and-animal/' + doctorId + '/' + animalId, {
                 appointmentDate
             });
             console.log(response.data);
