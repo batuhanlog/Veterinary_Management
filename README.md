@@ -3,6 +3,8 @@ Canlı Hali (rahmetli çok gençti) [https://veterinary-management.vercel.app/](
 Back-End : https://github.com/batuhanlog/Vet-Backend
 
 ![Screenshot (26)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/6cc18b7b-57ea-4e7e-b089-a60a229d56bc)
+![image](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/430516b8-7aac-4354-94ed-cb96993682fa)
+
 
 
 🚀 Veteriner Yönetim Sistemi
