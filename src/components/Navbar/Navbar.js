@@ -43,7 +43,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link text-white" to="/vaccines">
-                Aşılar
+                Aşılar💉
               </Link>
             </li>
             <li className="nav-item">
