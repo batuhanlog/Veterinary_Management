@@ -1,6 +1,6 @@
-Front End : **<a href="https://veterinary-management.vercel.app/" target="_blank" style="text-decoration: none;">İncele 🔎</a><br/> 
-Back End : **<a href="https://vet-backend-3gew.onrender.com" target="_blank" style="text-decoration: none;">İncele 🔎</a><br/>
-Back-End Repo : **<a href="https://github.com/batuhanlog/Vet-Backend" target="_blank" style="text-decoration: none;">İncele 🔎</a>
+Front End : <a href="https://veterinary-management.vercel.app/" target="_blank" style="text-decoration: none;">İncele 🔎</a><br/> 
+Back End : <a href="https://vet-backend-3gew.onrender.com" target="_blank" style="text-decoration: none;">İncele 🔎</a><br/>
+Back-End Repo : <a href="https://github.com/batuhanlog/Vet-Backend" target="_blank" style="text-decoration: none;">İncele 🔎</a>
 
 
 
