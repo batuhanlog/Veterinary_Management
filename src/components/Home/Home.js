@@ -6,8 +6,9 @@ function Home() {
       <div className="row">
         <div className="col-md-8 offset-md-2 py-5 text-center">
 
-          <h1 className="mt-3 text-center" style={{ color: "#58A399" }}>Veteriner Yönetim Sistemine Hoş Geldiniz.</h1>
-          <p className="lead text-center" style={{ color: "#007F73" }}>Sistemimizden muayene randevusu oluşturabilirsiniz.</p>
+    <img height={150} src="https://cdn-icons-png.flaticon.com/128/2171/2171990.png"/>
+          <h1 className="mt-3 text-center" >Wolcome</h1>
+          <p className="lead text-center" >Veteriner System</p>
         </div>
       </div>
     </div>
