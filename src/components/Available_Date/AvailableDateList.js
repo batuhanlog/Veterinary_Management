@@ -29,7 +29,7 @@ function AvailableDateList() {
             console.error('Müsait günler alınırken bir hata oluştu:', error);
         }
     };
-
+//test
     const handleAddDate = async () => {
         try {
             await AvailableDateService.createDateWithDoctor({ date: newDate.date }, doctorId);
