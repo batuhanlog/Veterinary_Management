@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AvailableDateService from '../../services/AvailableDateService';
+import './AvailableDate.css';
 
 function AvailableDateList() {
   const [availableDates, setAvailableDates] = useState([]);
@@ -36,8 +37,6 @@ function AvailableDateList() {
     }
   };
 
-
-
   const handleUpdate = async () => {
     try {
       await AvailableDateService.updateAvailableDate(editAvailableDate.id, editAvailableDate);
@@ -58,7 +57,7 @@ function AvailableDateList() {
   };
 
   return (
-    <div className="container-div">
+    <div className="available-date-list-container">
       <h2>Available Dates📆</h2>
       <div>
         <input
@@ -75,10 +74,9 @@ function AvailableDateList() {
         <button onClick={handleCreate}>Add New Available Date</button>
       </div>
 
-
       {/* Düzenleme formu */}
       {editAvailableDate && (
-        <div>
+        <div className="available-date-update-form">
           <input
             type="date"
             value={editAvailableDate.availableDate}
@@ -94,10 +92,10 @@ function AvailableDateList() {
         </div>
       )}
 
-      <ul>
+      <ul className="available-date-list">
         {availableDates.map((date) => (
           <li key={date.id}>
-          ID: {date.id} - Date: {date.availableDate} - Doctor ID: {date.doctorId}
+            ID: {date.id} - Date: {date.availableDate} - Doctor ID: {date.doctorId}
             <button onClick={() => handleEditClick(date)}>Edit</button>
             <button onClick={() => handleDelete(date.id)}>Delete</button>
           </li>
