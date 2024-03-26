@@ -30,7 +30,7 @@ function AvailableDateList() {
         }
     };
 
-  /*  const handleAddDate = async () => {
+    const handleAddDate = async () => {
         try {
             await AvailableDateService.createDateWithDoctor({ date: newDate.date }, doctorId);
     
@@ -40,7 +40,7 @@ function AvailableDateList() {
         } catch (error) {
             console.error('Müsait gün eklenirken hata:', error);
         }
-    }; */
+    }; 
 
     const handleAddDate = async () => {
 
