@@ -3,6 +3,7 @@ import AvailableDateService from '../../services/AvailableDateService';
 
 function AvailableDateList() {
   const [availableDates, setAvailableDates] = useState([]);
+  const [editAvailableDate, setEditAvailableDate] = useState(null);
   const [newAvailableDate, setNewAvailableDate] = useState({
     availableDate: '',
     doctorId: '',
@@ -21,6 +22,10 @@ function AvailableDateList() {
     }
   };
 
+  const handleEditClick = (date) => {
+    setEditAvailableDate({ ...date });
+  };
+
   const handleCreate = async () => {
     try {
       await AvailableDateService.createAvailableDate(newAvailableDate);
@@ -31,10 +36,13 @@ function AvailableDateList() {
     }
   };
 
-  const handleUpdate = async (id) => {
+
+
+  const handleUpdate = async () => {
     try {
-      await AvailableDateService.updateAvailableDate(id, newAvailableDate);
+      await AvailableDateService.updateAvailableDate(editAvailableDate.id, editAvailableDate);
       fetchAvailableDates();
+      setEditAvailableDate(null); // Edit modunu kapat
     } catch (error) {
       console.error('Error updating available date:', error);
     }
@@ -66,11 +74,31 @@ function AvailableDateList() {
         />
         <button onClick={handleCreate}>Add New Available Date</button>
       </div>
+
+
+      {/* Düzenleme formu */}
+      {editAvailableDate && (
+        <div>
+          <input
+            type="date"
+            value={editAvailableDate.availableDate}
+            onChange={(e) => setEditAvailableDate({ ...editAvailableDate, availableDate: e.target.value })}
+          />
+          <input
+            type="number"
+            value={editAvailableDate.doctorId}
+            onChange={(e) => setEditAvailableDate({ ...editAvailableDate, doctorId: e.target.value })}
+            placeholder="Doctor ID"
+          />
+          <button onClick={handleUpdate}>Update Available Date</button>
+        </div>
+      )}
+
       <ul>
         {availableDates.map((date) => (
           <li key={date.id}>
-            {date.availableDate} - Doctor ID: {date.doctorId}
-            <button onClick={() => handleUpdate(date.id)}>Edit</button>
+          ID: {date.id} - Date: {date.availableDate} - Doctor ID: {date.doctorId}
+            <button onClick={() => handleEditClick(date)}>Edit</button>
             <button onClick={() => handleDelete(date.id)}>Delete</button>
           </li>
         ))}
