@@ -264,7 +264,7 @@ function AppointmentList() {
 
 
             <div>
-                <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Randevu Listesi</h1>
+                <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Randevu Listesi📅</h1>
                 <br />
             </div>
     
