@@ -21,7 +21,7 @@ const AnimalForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:3000/api/v1/animal/create-with-customer/${animal.customerId}`, animal);
+            const response = await axios.post(`https://vet-backend-3gew.onrender.com/api/v1/animal/create-with-customer/${animal.customerId}`, animal);
             console.log(response.data);
             alert('Hayvan başarıyla kaydedildi!');
         } catch (error) {
