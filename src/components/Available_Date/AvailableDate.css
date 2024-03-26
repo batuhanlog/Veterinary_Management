@@ -1,6 +1,85 @@
-/* Kapsayıcı dive uygulanacak stiller */
-.container-div {
-  display: flex;
-  align-items: center;  /* Dikey olarak ortalar */
-  justify-content: center; /* Yatay olarak ortalar */
+.available-date-list-container {
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 90%;
+    max-width: 1150px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: start;
+}
+
+.available-date-list-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.available-date-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px; /* İçeriği alt alta yerleştirmek için */
+}
+
+.available-date-table th,
+.available-date-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.available-date-table th {
+    background-color: #f5f5f5;
+}
+
+.available-date-table tr:hover {
+    background-color: #eef;
+}
+
+.available-date-table td {
+    color: #555;
+}
+
+.available-date-list-container button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #2D9596;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #2D9596;
+    color: white;
+}
+
+.available-date-list-container button:hover {
+    background-color: #1E6668;
+}
+
+.available-date-update-form {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: auto; /* Formu ortalamak için */
+}
+
+.available-date-update-form .form-group {
+    margin-bottom: 15px;
+}
+
+.available-date-update-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.available-date-update-form .form-actions {
+    text-align: start;
+}
+
+.available-date-update-form input,
+.available-date-update-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
