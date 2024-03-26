@@ -92,3 +92,5 @@ export const AvailableDateService = {
         return response.ok;
     }
 };
+
+export defualt AvailableDateService;
