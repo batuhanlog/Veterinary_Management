@@ -143,7 +143,8 @@ function AnimalList() {
 
         <div className="container">
          <br /> 
-         <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Hayvan Listesi</h1>
+         <h1 className="mt-3 text-center" style={{ color: "#4F4A45" }}>Hayvan Listesi🐈
+</h1>
     
            <br />
 
