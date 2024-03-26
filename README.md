@@ -1,6 +1,6 @@
-Front End [https://veterinary-management.vercel.app/](https://veterinary-management.vercel.app/) <br/>
-Back End : https://vet-backend-3gew.onrender.com<br/>
-Back-End Repo : https://github.com/batuhanlog/Vet-Backend
+Front End : "İncele🔎:https://veterinary-management.vercel.app/" <br/>
+Back End : "İncele🔎:https://vet-backend-3gew.onrender.com"<br/>
+Back-End Repo : "İncele🔎:https://github.com/batuhanlog/Vet-Backend"
 
 ![Screenshot (28)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/3b1310d8-0344-4072-9729-d47260db8af5)
 ![Screenshot (29)](https://github.com/batuhanlog/Veterinary_Management/assets/82649079/335ca6c7-0112-42b3-9ff4-ba4a9ae3b39d)
