@@ -10,6 +10,11 @@ function VaccineList() {
     const [editingVaccine, setEditingVaccine] = useState(null);
 
 
+        // Function to set the vaccine to be edited
+    const handleEdit = (vaccine) => {
+        setEditingVaccine(vaccine);
+    };
+
     const fetchVaccines = async () => {
         setLoading(true);
         try {
@@ -57,7 +62,7 @@ function VaccineList() {
 
     return (
         <div className="vaccine-list-container">
-            <h2 className="list-heading">Vaccine List💉</h2>
+            <h2 className="list-heading">Vaccine List</h2>
             {vaccines.length > 0 ? (
                 <table className='vaccine-table'>
                     <thead>
@@ -72,31 +77,39 @@ function VaccineList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {vaccines.map((vaccine) => (
-                            <tr key={vaccine.id}>
-                                <td>{vaccine.id}</td>
-                                <td>{vaccine.name}</td>
-                                <td>{vaccine.code}</td>
-                                <td>{vaccine.protectionStartDate}</td>
-                                <td>{vaccine.protectionFinishDate}</td>
-                                <td>{vaccine.reportId}</td>
-                                <td>
-                                    <button className="delete-button" onClick={() => handleDelete(vaccine.id)}>Delete</button>
-                                </td>
-                            </tr>
-                        ))}
+                    {vaccines.map((vaccine) => (
+                    <tr key={vaccine.id}>
+                        <td>{vaccine.id}</td>
+                        <td>{vaccine.name}</td>
+                        <td>{vaccine.code}</td>
+                        <td>{vaccine.protectionStartDate}</td>
+                        <td>{vaccine.protectionFinishDate}</td>
+                        <td>{vaccine.reportId}</td>
+                        <td>
+                            <button className="edit-button" onClick={() => handleEdit(vaccine)}>Edit</button>
+                            <button className="delete-button" onClick={() => handleDelete(vaccine.id)}>Delete</button>
+                        </td>
+                    </tr>
+                ))}
                     </tbody>
                 </table>
             ) : (
                 <p>No vaccines found.</p>
             )}
 
+
             {/* Include VaccineForm if it's being used /}
             {/ <VaccineForm /> /}
 
             <h2 className="form-heading">Add Vaccine</h2>
             {/ Pass addVaccineToList as a prop to VaccineForm */}
-            <VaccineForm className="vaccine-form" onVaccineAdd={addVaccineToList} />
+            <VaccineForm className="vaccine-form" onVaccineAdd={addVaccineToList} 
+         
+            onVaccineUpdate={handleUpdateVaccine}
+            isUpdate={Boolean(editingVaccine)}
+            editingVaccine={editingVaccine}
+            
+            />
 
         </div>
     );
